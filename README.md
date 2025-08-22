@@ -41,6 +41,7 @@
   xUnit (for tests)
 
 <b>📦 Getting Started</b>
+  
   Prerequisites:
   .NET 8 SDK
   Visual Studio 2022 / VS Code
