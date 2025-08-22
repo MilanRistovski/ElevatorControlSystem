@@ -1,3 +1,6 @@
+<img width="1903" height="919" alt="image" src="https://github.com/user-attachments/assets/d264ad52-e7d2-4a20-a8ac-924864148de6" />
+
+
 <b>🚀 Elevator Control Simulation</b>
 
   A .NET 8 web application that simulates a multi-car elevator control system.
