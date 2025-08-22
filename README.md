@@ -2,7 +2,7 @@
 
   A .NET 8 web application that simulates a multi-car elevator control system.
 
-📂 Project Structure
+<b>📂 Project Structure</b>
 
   Domain – Core entities (Car, Direction) and enums.
   
@@ -14,7 +14,7 @@
   
   Tests – Unit tests for dispatcher, mover, and helper logic.
 
-⚙️ Features
+<b>⚙️ Features</b>
 
   Simulates multiple elevators (configurable).
   
@@ -30,7 +30,7 @@
   
   Simple UI for interaction (no JS required, auto-refresh).
 
-🛠️ Tech Stack
+<b>🛠️ Tech Stack</b>
 
   .NET 8
   
@@ -40,7 +40,7 @@
   
   xUnit (for tests)
 
-📦 Getting Started
+<b>📦 Getting Started</b>
   Prerequisites:
   .NET 8 SDK
   Visual Studio 2022 / VS Code
@@ -54,7 +54,7 @@
 
   Alternative - run directly through VS (Make ElevatorControl.Web your startup project)
 
-⚙️ Configuration
+<b>⚙️ Configuration</b>
 Adjust appsettings.json:
 
 "ElevatorOptions": {
@@ -65,11 +65,11 @@ Adjust appsettings.json:
   "InitialFloor": 1
 }
 
-🧪 Running Tests
+<b>🧪 Running Tests</b>
 
   dotnet test
 
-📸 UI Preview
+<b>📸 UI Preview</b>
   
   Hall Calls: Request elevators from any floor.
   
@@ -77,6 +77,6 @@ Adjust appsettings.json:
   
   Log: View detailed movement and door activity.
 
-👤 Author
+<b>👤 Author</b>
 
   Built by Milan Ristovski as a demo project for interview and learning purposes.
