@@ -1,0 +1,84 @@
+﻿@model ElevatorControl.Web.Models.ElevatorViewModel
+@{
+				Layout = null;
+}
+<!doctype html>
+<html>
+<head>
+				<meta charset="utf-8" />
+				<title>Elevator Control</title>
+				<!-- Auto-refresh to see movement without JS -->
+				<meta http-equiv="refresh" content="5" />
+				<style>
+								body { background:#0b0f14; color:#f5b469; font-family:Consolas, monospace; }
+								.panel { background:#121820; padding:16px; border-radius:12px; box-shadow:0 0 0 1px #1e2733 inset; margin:16px auto; max-width:1100px;}
+								.row { display:flex; gap:12px; align-items:center; margin:8px 0; }
+								.btn { background:#fff; color:#111; border-radius:999px; width:40px; height:40px; display:flex; align-items:center; justify-content:center; border:0; cursor:pointer;}
+								.grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+								.muted { color:#8aa0b3; }
+								.log { background:#0f141b; border-radius:8px; padding:8px; height:260px; overflow:auto; color:#cbd5e1; }
+								.inline { display:inline; }
+								.label { width:100px; }
+				</style>
+</head>
+<body>
+				<div class="panel">
+								<h2>Elevator Control (manual)</h2>
+
+								<h3>Hall Calls</h3>
+								@for (var f = Model.Floors; f >= 1; f--)
+								{
+												<div class="row">
+																<div class="label">Floor @f</div>
+																<form class="inline" method="post" asp-action="Hall">
+																				<input type="hidden" name="floor" value="@f" />
+																				<input type="hidden" name="direction" value="Up" />
+																				<button class="btn" title="Up">↑</button>
+																</form>
+																<form class="inline" method="post" asp-action="Hall">
+																				<input type="hidden" name="floor" value="@f" />
+																				<input type="hidden" name="direction" value="Down" />
+																				<button class="btn" title="Down">↓</button>
+																</form>
+												</div>
+								}
+				</div>
+
+				<div class="panel grid">
+								<div>
+												<h3>Cars</h3>
+												@foreach (var car in Model.Cars)
+												{
+																<div class="row">
+																				<div style="min-width:260px;">
+																								Car @car.Id
+																								<span class="muted">| Floor:</span> @car.Floor
+																								<span class="muted">| Status:</span> @car.Direction@(car.DoorsOpen ? " (doors open)" : "")
+																								<span class="muted">| Plan:</span> [@string.Join(", ", car.Plan)]
+																				</div>
+																</div>
+																<div class="row" style="flex-wrap:wrap;">
+																				@for (var f = 1; f <= Model.Floors; f++)
+																				{
+																								<form class="inline" method="post" asp-action="CarGo">
+																												<input type="hidden" name="carId" value="@car.Id" />
+																												<input type="hidden" name="floor" value="@f" />
+																												<button class="btn">@f</button>
+																								</form>
+																				}
+																</div>
+												}
+								</div>
+
+								<div>
+												<h3>Log</h3>
+												<div class="log">
+																@foreach (var line in Model.Logs)
+																{
+																				<div>@line</div>
+																}
+												</div>
+								</div>
+				</div>
+</body>
+</html>

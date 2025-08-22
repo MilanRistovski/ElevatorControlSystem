@@ -1,0 +1,14 @@
+﻿using ElevatorControl.Domain.Enums;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ElevatorControl.Application.Abstractions
+{
+	public interface IElevatorDispatcher
+	{
+		void AssignHallCall(int floor, Direction direction);
+	}
+}

@@ -1,0 +1,43 @@
+# Build results
+bin/
+obj/
+out/
+
+# Visual Studio cache
+.vs/
+*.user
+*.suo
+
+# Logs
+*.log
+
+# NuGet packages
+*.nupkg
+*.snupkg
+project.lock.json
+project.assets.json
+*.nuget.props
+*.nuget.targets
+
+# Build artifacts
+*.dll
+*.exe
+*.pdb
+*.cache
+*.config
+*.dbmdl
+*.bak
+
+# IDE files
+*.userprefs
+*.swp
+
+# Test results
+TestResults/
+*.testlog
+*.coverage
+*.coveragexml
+
+# Others
+_ReSharper*/
+*.DotSettings

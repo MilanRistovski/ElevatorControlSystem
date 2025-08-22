@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	<TargetFramework>net8.0</TargetFramework>
+	<Nullable>enable</Nullable>
+	<ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<ProjectReference Include="..\ElevatorControl.Application\ElevatorControl.Application.csproj" />
+	<ProjectReference Include="..\ElevatorControl.Domain\ElevatorControl.Domain.csproj" />
+	<ProjectReference Include="..\ElevatorControl.Infrastructure\ElevatorControl.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
