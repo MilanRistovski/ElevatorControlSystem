@@ -46,9 +46,9 @@
   Visual Studio 2022 / VS Code
 
   Run the app
-  git clone https://github.com/your-repo/elevator-control.git
-  cd elevator-control
-  dotnet run --project ElevatorControl.Web
+  git clone https://github.com/MilanRistovski/ElevatorControlSystem.git
+  cd ElevatorControlSystem
+  dotnet run --project ElevatorControlSystem
 
   Navigate to localhost
 
